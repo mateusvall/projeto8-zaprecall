@@ -1,0 +1,19 @@
+.pergunta{
+    width: 300px;
+    height: 65px;
+    margin-bottom: 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pergunta h1{
+    margin-left: 15px;
+}
+
+.pergunta img{
+    margin-right: 22px;
+}

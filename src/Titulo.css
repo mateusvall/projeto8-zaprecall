@@ -1,0 +1,16 @@
+.titulo{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.titulo h1{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+}
+
+.titulo img{
+    margin-right: 20px;
+}
