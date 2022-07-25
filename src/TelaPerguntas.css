@@ -6,3 +6,12 @@
     justify-content: center;
     margin-bottom: 70px;
 }
+
+.tela-final{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 160px;
+}

@@ -4,9 +4,11 @@ import turn from './turn.png'
 import errado from './errado.png'
 import certo from './certo.png'
 import quase from './quase.png'
+import sad from './sad.png'
+import happy from './happy.png'
 import './Pergunta.css'
 
-export default function Pergunta({index, pergunta, resposta, feito, setFeito, icones, setIcones}){
+export default function Pergunta({index, pergunta, resposta, feito, setFeito, icones, setIcones, tamanho, mensagem, setMensagem}){
     const [status, setStatus] = React.useState("pergunta");
     const [content, setContent] = React.useState("Pergunta " +(index+1))
     const [cor, setCor] = React.useState("#333333")
@@ -43,6 +45,23 @@ export default function Pergunta({index, pergunta, resposta, feito, setFeito, ic
         const iconesAtualizados = [...icones, novoIcone]
         setIcones(iconesAtualizados);
 
+        verificaFim();
+
+    }
+
+    function verificaFim(){
+       if((feito+1) === tamanho){
+        alert("Cabou-se!")
+        if(icones.filter(verificaErrado).length >= 1){
+            setMensagem({titulo:"Putz...",texto:"Ainda faltam alguns...Mas não desanime!", img:sad})
+        }else{
+            setMensagem({titulo:"Parabéns!",texto:"Você não esqueceu de nenhum flashcard!", img:happy})
+        }
+       }
+    }
+
+    function verificaErrado(elemento){
+        return elemento.img == errado;
     }
 }
 

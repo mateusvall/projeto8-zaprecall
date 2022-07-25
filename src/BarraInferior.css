@@ -22,3 +22,19 @@
     margin-top: 6px;
     margin-right: 5px;
 }
+
+.barra-inferior h3{
+    margin: 15px;
+    font-weight: 700;
+}
+.barra-inferior h3 img{
+    margin-right: 15px;
+}
+
+.barra-inferior h2{
+    margin-bottom: 15px;
+}
+
+.desativado{
+    display: none;
+}
