@@ -41,11 +41,12 @@ const perguntas = [
 
 export default function TelaPerguntas(){
     const [feito, setFeito] = React.useState(0);
+    const [icones, setIcones] = React.useState([]);
     return(
         <div className="tela-perguntas">
             <Titulo/>
-            {perguntas.map((pergunta,index) => <Pergunta index={index} pergunta={pergunta.pergunta} resposta={pergunta.resposta} feito={feito} setFeito={setFeito}/>)}
-            <BarraInferior tamanho={perguntas.length} feito={feito}/>
+            {perguntas.map((pergunta,index) => <Pergunta index={index} pergunta={pergunta.pergunta} resposta={pergunta.resposta} feito={feito} setFeito={setFeito} icones={icones} setIcones={setIcones}/>)}
+            <BarraInferior tamanho={perguntas.length} feito={feito} icones={icones}/>
         </div>
     )
 }

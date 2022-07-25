@@ -6,7 +6,7 @@ import certo from './certo.png'
 import quase from './quase.png'
 import './Pergunta.css'
 
-export default function Pergunta({index, pergunta, resposta, feito, setFeito}){
+export default function Pergunta({index, pergunta, resposta, feito, setFeito, icones, setIcones}){
     const [status, setStatus] = React.useState("pergunta");
     const [content, setContent] = React.useState("Pergunta " +(index+1))
     const [cor, setCor] = React.useState("#333333")
@@ -37,7 +37,11 @@ export default function Pergunta({index, pergunta, resposta, feito, setFeito}){
         setStatus("finished");
         setContent("Pergunta " +(index+1));
         setCor(color);
-        setImage(img)
+        setImage(img);
+
+        const novoIcone = {img:img}
+        const iconesAtualizados = [...icones, novoIcone]
+        setIcones(iconesAtualizados);
 
     }
 }
