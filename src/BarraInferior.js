@@ -1,8 +1,8 @@
 import './BarraInferior.css'
-export default function BarraInferior(){
+export default function BarraInferior({tamanho, feito}){
     return(
         <div className="barra-inferior">
-            <h1>0/4 CONCLUÍDOS</h1>
+            <h1>{feito}/{tamanho} CONCLUÍDOS</h1>
         </div>
     )
 }

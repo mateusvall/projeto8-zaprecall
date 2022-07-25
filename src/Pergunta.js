@@ -1,9 +1,10 @@
 import React from 'react'
 import play_pergunta from './play_pergunta.png'
 import turn from './turn.png'
+import errado from './errado.png'
 import './Pergunta.css'
 
-export default function Pergunta({index, pergunta, resposta}){
+export default function Pergunta({index, pergunta, resposta, feito, setFeito}){
     const [select, setSelect] = React.useState(false);
     const [flip, setFlip] = React.useState(false);
     return(
@@ -18,6 +19,7 @@ export default function Pergunta({index, pergunta, resposta}){
     )
 
     function voltaPergunta(){
+        setFeito(feito+1)
         setSelect(false);
         setFlip(false)
     }
