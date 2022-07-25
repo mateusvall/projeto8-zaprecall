@@ -12,6 +12,5 @@ export default function ButtonStart(){
 }
 
 function MudaTela(){
-    alert("Botão Apertado");
     ReactDOM.render(<TelaPerguntas />, document.querySelector(".root"));
 }

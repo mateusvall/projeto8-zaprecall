@@ -51,7 +51,6 @@ export default function Pergunta({index, pergunta, resposta, feito, setFeito, ic
 
     function verificaFim(){
        if((feito+1) === tamanho){
-        alert("Cabou-se!")
         if(icones.filter(verificaErrado).length >= 1){
             setMensagem({titulo:"Putz...",texto:"Ainda faltam alguns...Mas não desanime!", img:sad})
         }else{
