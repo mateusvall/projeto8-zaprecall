@@ -43,7 +43,7 @@ export default function TelaPerguntas(){
     return(
         <div className="tela-perguntas">
             <Titulo/>
-            {perguntas.map((pergunta,index) => <Pergunta index={index} pergunta={pergunta.pergunta}/>)}
+            {perguntas.map((pergunta,index) => <Pergunta index={index} pergunta={pergunta.pergunta} resposta={pergunta.resposta}/>)}
             <BarraInferior/>
         </div>
     )
