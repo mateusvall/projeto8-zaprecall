@@ -25,7 +25,8 @@
 }
 
 .pergunta .turn-button,
-.pergunta button{
+.pergunta button,
+.pergunta .check-button{
     display: none;
 }
 
@@ -130,4 +131,42 @@ button{
     position: absolute;
     left: 198.83px;
     bottom: 6px;
+}
+
+.finished{
+    width: 300px;
+    height: 65px;
+    margin-bottom: 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.finished h1{
+    margin-left: 15px;
+    margin-right: 31px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: line-through;
+
+}
+
+.finished img{
+    margin-right: 22px;
+}
+
+.finished .turn-button,
+.finished button,
+.finished .play-button{
+    display: none;
+}
+
+.finished .check-button{
+    display: inherit;
 }
